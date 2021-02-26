@@ -11,9 +11,9 @@ namespace Bakery.Models
     }
     public int ClaculatePrice()
     {
-      int updatedQuantity = Quantity;
       for (int i = 0; i < Quantity; i++)
       {
+        int updatedQuantity = Quantity;
         if (i % 2 == 0)
         {
           updatedQuantity ++;
@@ -31,7 +31,22 @@ namespace Bakery.Models
     public Pastry(int desiredQuantity)
     {
       Quantity = desiredQuantity;
-      UnitPrice = 3;
+      UnitPrice = 2;
+    }
+
+    public int ClaculatePrice()
+    {
+      for (int i = 0; i < Quantity; i++)
+      {
+        total = 0;
+        if ( i % 3 == 0)
+        {
+          total --;
+
+        }
+        total =+ 2;
+      }
+      return ("You got {0} Pastries for ${1} -- with a discount of ${2}", Quantity, total, Quantity * UnitPrice);
     }
   }
 }
