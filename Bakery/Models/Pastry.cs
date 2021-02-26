@@ -12,10 +12,10 @@ namespace Bakery.Models
       UnitPrice = 2;
     }
 
-    public void ClaculatePrice()
+    public (int, int) ClaculatePrice()
     {
       int total = 0;
-      for (int i = 0; i < Quantity; i++)
+      for (int i = 1; i <= Quantity; i++)
       {
         total += 2;
         if ( i % 3 == 0)
@@ -24,7 +24,7 @@ namespace Bakery.Models
 
         }
       }
-      Console.WriteLine("You got {0} Pastries for ${1} -- with a discount of ${2}", Quantity, total, (Quantity * UnitPrice - total));
+      return (total, Quantity);
     }
   }
 }
