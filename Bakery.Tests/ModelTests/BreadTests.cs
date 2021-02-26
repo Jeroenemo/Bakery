@@ -14,6 +14,7 @@ namespace Bakery.Tests
       Bread newBread = new Bread(3);
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
+
     [TestMethod]
     public void SetQuantity_ReturnsQuantity_Int()
     {
@@ -24,6 +25,7 @@ namespace Bakery.Tests
 
       Assert.AreEqual(quantity, result);
     }
+
     [TestMethod]
     public void CalculatePrice_ReturnsPrice_Int()
     {
@@ -33,8 +35,17 @@ namespace Bakery.Tests
       (int, int) result = newBread.ClaculatePrice();
 
       Assert.AreEqual((5, 1), result);
+    }
 
+    [TestMethod]
+    public void CalculateDiscount_ReturnsDiscount_Int()
+    {
+      int quantity = 4;
+      
+      Bread newBread = new Bread(quantity);
+      (int, int) result = newBread.ClaculatePrice();
 
+      Assert.AreEqual((20, 6), result);
     }
   }
 }
