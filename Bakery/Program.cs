@@ -15,16 +15,16 @@ namespace Bakery
         case "B":
           Console.WriteLine("How many loaves would you like?");
           int breadQuantity = int.Parse(Console.ReadLine());
-          // Bread newBread = new Bread(quantity);
-          // newBread.ClaculatePrice();
+          Bread newBread = new Bread(breadQuantity);
+          newBread.ClaculatePrice();
           Main();
           break;
 
         case "P":
           Console.WriteLine("How many pastries would you like?");
           int pastryQuantity = int.Parse(Console.ReadLine());
-          // Pastry newPastry = new Pastry(quantity);
-          // newPastry.ClaculatePrice();
+          Pastry newPastry = new Pastry(pastryQuantity);
+          newPastry.ClaculatePrice();
           Main();
           break;
 
