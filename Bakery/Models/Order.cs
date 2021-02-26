@@ -6,16 +6,19 @@ namespace Bakery.Models
 {
   public  class Order
   {
-    public Object ThisOrder { get; set; }
+    public (int, int) CurrentOrder { get; set; }
+    public string Type { get; set; }
     private static List<Order> _order = new List<Order> {};
 
-    public Order(Object order)
+    public Order(string type, (int, int) order)
     {
-      ThisOrder = order;
+      CurrentOrder = order;
+      Type = type;
+
       _order.Add(this);
     }
 
-    public static List<Order> GetAll()
+    public static List<Order> GetOrder()
     {
       return _order;
     }
