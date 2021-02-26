@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Bakery.Models;
 
 namespace Bakery
@@ -17,6 +18,7 @@ namespace Bakery
           int breadQuantity = int.Parse(Console.ReadLine());
           Bread newBread = new Bread(breadQuantity);
           (int,int) breadResult = newBread.ClaculatePrice();
+          Order newOrder = new Order(breadResult);
           Console.WriteLine("Your total for {0} loaves is ${1}", breadResult.Item2, breadResult.Item1);
           Main();
           break;
@@ -32,6 +34,11 @@ namespace Bakery
 
         case "Q":
           Console.WriteLine("Have a nice day!");
+          List<Order> allOrders = Order.GetAll();
+          foreach (Order thisOrder in allOrders)
+          {
+            Console.WriteLine(thisOrder.ThisOrder);
+          }
           break;
 
         default:
