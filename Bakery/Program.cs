@@ -16,7 +16,8 @@ namespace Bakery
           Console.WriteLine("How many loaves would you like?");
           int breadQuantity = int.Parse(Console.ReadLine());
           Bread newBread = new Bread(breadQuantity);
-          newBread.ClaculatePrice();
+          (int,int) breadResult = newBread.ClaculatePrice();
+          Console.WriteLine("Your total for {0} loaves is ${1}", breadResult.Item2, breadResult.Item1);
           Main();
           break;
 
@@ -24,7 +25,8 @@ namespace Bakery
           Console.WriteLine("How many pastries would you like?");
           int pastryQuantity = int.Parse(Console.ReadLine());
           Pastry newPastry = new Pastry(pastryQuantity);
-          newPastry.ClaculatePrice();
+          (int, int) pastryResult = newPastry.ClaculatePrice();
+          Console.WriteLine("Your total for {0} pastries is ${1}", pastryResult.Item2, pastryResult.Item1);
           Main();
           break;
 
