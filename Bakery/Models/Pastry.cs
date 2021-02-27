@@ -14,16 +14,9 @@ namespace Bakery.Models
 
     public (int, int) ClaculatePrice()
     {
-      int total = 0;
-      for (int i = 1; i <= Quantity; i++)
-      {
-        total += 2;
-        if ( i % 3 == 0)
-        {
-          total --;
-
-        }
-      }
+      int numberOfDeals = (Quantity / 3);
+      int remainingPastries = Quantity - (numberOfDeals * 3);
+      int total = (numberOfDeals * 5) + (remainingPastries * 2);
       return (total, Quantity);
     }
   }

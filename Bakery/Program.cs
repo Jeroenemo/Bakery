@@ -8,7 +8,7 @@ namespace Bakery
   {
     public static void Main()
     {
-      Console.WriteLine("Welcome to my Bakery!");
+      Console.WriteLine("MAIN MENU");
       Console.WriteLine("Enter 'B' for bread, 'P' for pastries, 'C' to checkout, or 'Q' to leave");
       string userInput = Console.ReadLine().ToUpper();
       switch (userInput)
