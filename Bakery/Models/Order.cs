@@ -6,8 +6,8 @@ namespace Bakery.Models
 {
   public  class Order
   {
-    public (int, int) CurrentOrder { get; set; }
-    public string Type { get; set; }
+    public (int, int) CurrentOrder { get; }
+    public string Type { get; }
     private static List<Order> _order = new List<Order> {};
 
     public Order(string type, (int, int) order)
@@ -23,5 +23,9 @@ namespace Bakery.Models
       return _order;
     }
     
+    public static void ClearAll()
+    {
+      _order.Clear();
+    }
   }
 }
