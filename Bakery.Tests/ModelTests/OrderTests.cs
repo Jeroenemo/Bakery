@@ -52,5 +52,18 @@ namespace Bakery.Tests
 
       CollectionAssert.AreEqual(newOrder, result);
     }
+    [TestMethod]
+
+    public void GetOrder_ReturnsOrders_OrderList()
+    {
+      (int, int) currentOrder = (3, 5);
+      string orderType = "Pastries";
+      Order newOrder = new Order(orderType, currentOrder);
+      List<Order> newList = new List<Order> { newOrder };
+
+      List<Order> result = Order.GetOrder();
+
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
