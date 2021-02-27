@@ -14,7 +14,7 @@ namespace Bakery
       switch (userInput)
       {
         case "B":
-          Console.WriteLine("How many loaves would you like?");
+          Console.WriteLine("It's $5 per loaf, Buy 2 get 1 Free! How many loaves would you like?");
           int breadQuantity = int.Parse(Console.ReadLine());
           Bread newBread = new Bread(breadQuantity);
           (int,int) breadResult = newBread.ClaculatePrice();
@@ -23,7 +23,7 @@ namespace Bakery
           break;
 
         case "P":
-          Console.WriteLine("How many pastries would you like?");
+          Console.WriteLine("It's $2 per pastry, 3 for $5! How many pastries would you like?");
           int pastryQuantity = int.Parse(Console.ReadLine());
           Pastry newPastry = new Pastry(pastryQuantity);
           (int, int) pastryResult = newPastry.ClaculatePrice();
