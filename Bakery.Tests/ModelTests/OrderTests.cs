@@ -12,7 +12,7 @@ namespace Bakery.Tests
     {
       Order.ClearAll();
     }
-
+    
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
@@ -32,5 +32,17 @@ namespace Bakery.Tests
       Assert.AreEqual(result, orderType);
     }
 
+    [TestMethod]
+    public void GetOrderType_ReturnsCurrentOrderType_Int()
+    {
+      (int, int) currentOrder = (3, 5);
+      string orderType = "Pastries";
+
+      Order newOrder = new Order(orderType, currentOrder);
+      (int, int) result = newOrder.CurrentOrder;
+      
+      Assert.AreEqual(result, currentOrder);
+    }
+    
   }
 }
