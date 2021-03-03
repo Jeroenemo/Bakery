@@ -30,7 +30,7 @@ This is a basic console application that showcases my undestanding of C# basics.
 * Clone the repository from GitHub using `git clone https://github.com/Jeroenemo/Bakery.git`
 * Navigate to the downloaded folder using the cd command
 * To run the application, navigate to the Bakery folder, and type `dotnet run`
-* To run the tests, navigate to the Bakery.Tests folder, and type `dotnet restore`
+* To run the tests, navigate to the Bakery.Tests folder, and type `dotnet restore` followed by `dotnet test`
 * Enjoy
 ## Future Enhancements
 
